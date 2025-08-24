@@ -1,4 +1,4 @@
-# 🧮 Calculadora em Python
+## 🧮 Calculadora em Python
 
 Este é um projeto simples de **calculadora em Python**, criado para praticar conceitos básicos da linguagem, como:
 
@@ -28,6 +28,7 @@ Digite 3 para divisão
 Digite 4 para multiplicação
 Operação: 2
 O resultado da subtração é 5.0
+```
 
 ## 🔧 Tecnologias utilizadas
 
