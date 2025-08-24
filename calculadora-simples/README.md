@@ -32,4 +32,8 @@ O resultado da subtração é 5.0
 
 ## 🔧 Tecnologias utilizadas
 
-- [Python 3](https://www.python.org/)
+- Python 3
+
+## 👤 Autor
+
+Kaymmi Nunes Barbosa
