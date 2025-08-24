@@ -1,24 +1,32 @@
-## Descrição: Leia uma frase do usuário e mostre quantas vogais e consoantes há (ignore espaços, números e pontuação).  
-# Exemplo: 
-# Entrada: Programar é divertido! 
-# Saída: Vogais: 8 | Consoantes: 10 
-# Dica: use lower(), isalpha() e verifique se o caractere está em 'aeiou'. Um for sobre cada caractere ajuda.
+## Identificar vogais e consoantes
 
-vogais = []
-consoantes = []
+import unicodedata   # importa a biblioteca usada para remover acentos das letras
 
-print("____Contar vogais e consoantes____")
-frase = input("\nEscreva a frase para a análise: \n \n")
-frase = frase.lower() # transforma tudo em minúsculo
+def remover_acentos(frase): # função que remove acentuação de uma frase ou palavra
+    return unicodedata.normalize('NFD', frase).encode('ascii', 'ignore').decode('utf-8')
 
-for letras in frase: # verifica caractere por caractere da frase
-    if letras.isalpha(): # se for letra
-        if letras in("a", "e", "i", "o","u"): # verifica as vogais
-            vogais.append(letras) # adiciona uma vogal na lista
-        else:
-            consoantes.append(letras) # o que não é vogal é adicionado na lista de consoantes
+vogais = []       # cria uma lista vazia para armazenar todas as vogais encontradas
+consoantes = []   # cria uma lista vazia para armazenar todas as consoantes encontradas
 
-print("\nVogais:", len(vogais), "| Consoantes:", len(consoantes)) # len() faz a contagem de itens na lista
+print("____Contar vogais e consoantes____")   # título inicial para o usuário
 
+frase = input("\nEscreva a frase para a análise: \n \n") # recebe uma frase do usuário
+
+frase = frase.lower()           # transforma todos os caracteres em minúsculo
+frase = remover_acentos(frase)  # chama a função para remover acentos da frase
+
+for letras in frase:  # percorre letra por letra dentro da frase
+    if letras.isalpha():   # verifica se o caractere é uma letra (ignora espaço, número, pontuação)
+        if letras in ("a", "e", "i", "o", "u"):   # se a letra for uma vogal
+            vogais.append(letras)      # adiciona a letra na lista de vogais
+        else:  
+            consoantes.append(letras)  # se não for vogal, adiciona na lista de consoantes
+
+# mostra quantas vogais e consoantes foram encontradas (len() conta os itens de cada lista)
+print("\nVogais:", len(vogais), "| Consoantes:", len(consoantes))  
+
+# mostra a lista com todas as vogais encontradas
 print("\nAs vogais são:", vogais)
+
+# mostra a lista com todas as consoantes encontradas
 print("As consoantes são:", consoantes, "\n")

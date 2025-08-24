@@ -1,32 +1,27 @@
-# Verificar palíndromo (ignorando espaços e maiúsculas)
-# Descrição: Leia uma palavra/frase e diga se é palíndromo (mesma leitura ao contrário), ignorando espaços e diferenças de maiúsculas/minúsculas.
-# Exemplo:
-# Entrada: Socorram me subino onibus em marrocos
-# Saída: É palíndromo
-# Dica: remova espaços com replace(" ", ""), aplique lower() e compare a string com ela invertida    s[::-1].
+## Verificar palíndromo (ignorando espaços e maiúsculas) com lista
 
-letras = []
-contra = []
+letras = []  # lista que vai armazenar as letras normais
+contra = []  # lista que vai armazenar as letras invertidas
 
-print("____ Verificar palíndromo ____")
-frase = input("\nEscreva a frase para a análise: ")
-frase = frase.lower() # transforma tudo em minúsculo
-frase = frase.replace(" ", "") # remove espaços
+print("____ Verificar palíndromo ____")  # título do programa
+frase = input("\nEscreva a frase para a análise: ")  # entrada da frase
+frase = frase.lower()  # transforma tudo em minúsculo
+frase = frase.replace(" ", "")  # remove espaços
 
-for letra in frase: # verifica caractere por caractere da frase
-    if letra.isalpha(): # se for letra (ignorando outros caracteres)
-        letras.append(letra) # adiciona as letras na lista
+for letra in frase:  # percorre caractere por caractere da frase
+    if letra.isalpha():  # verifica se é letra (ignora números e símbolos)
+        letras.append(letra)  # adiciona a letra na lista de letras
 
-for letra in letras: # verifica caractere por caractere da lista
-    if letra.isalpha(): # se for letra (ignorando outros caracteres)
-        contra.append(letra) # adiciona as letras na lista
+for letra in letras:  # percorre caractere por caractere da lista de letras
+    if letra.isalpha():  # verifica se é letra (mesma checagem anterior)
+        contra.append(letra)  # adiciona a letra na lista contra
 
-contra = contra[::-1]
+contra = contra[::-1]  # inverte a lista (lê de trás para frente)
 
-if letras == contra: # lê a string de trás pra frente (passo -1)
-    print(f"\nA frase - {frase} - é palíndromo")
+if letras == contra:  # compara a lista normal com a lista invertida
+    print(f"\nA frase - {frase} - é palíndromo")  # imprime se for palíndromo
 else:
-    print(f"\nA frase - {frase} - não é palíndromo")
+    print(f"\nA frase - {frase} - não é palíndromo")  # imprime se não for palíndromo
 
-print("\nNormal: ", letras)
-print("\nContrário: ", contra, "\n")
+print("\nNormal: ", letras)  # mostra a lista normal
+print("\nContrário: ", contra, "\n")  # mostra a lista invertida

@@ -1,21 +1,18 @@
-# Verificar palíndromo (ignorando espaços e maiúsculas)
-# Descrição: Leia uma palavra/frase e diga se é palíndromo (mesma leitura ao contrário), ignorando espaços e diferenças de maiúsculas/minúsculas.
-# Exemplo:
-# Entrada: Socorram me subino onibus em marrocos
-# Saída: É palíndromo
-# Dica: remova espaços com replace(" ", ""), aplique lower() e compare a string com ela invertida    s[::-1].
+## Verificar palíndromo (ignorando espaços e maiúsculas)
 
-# Função criada para remover acentos
-def remover_acentos(caractere):
-    return unicodedata.normalize('NFD', caractere).encode('ascii', 'ignore').decode('utf-8')
+import unicodedata  # importa a biblioteca usada para manipulação de caracteres especiais (acentos)
 
-print("____ Verificar palíndromo ____")
-frase = input("\nEscreva a frase para a análise: ")
-frase = frase.lower() # transforma tudo em minúsculo
-frase = frase.replace(" ", "") # remove espaços
-fraseContra = (frase[::-1]) # lê a string de trás pra frente (passo -1)
+def remover_acentos(frase):  
+    return unicodedata.normalize('NFD', frase).encode('ascii', 'ignore').decode('utf-8')  # normaliza e remove acentos
 
-if frase in fraseContra:
-    print(f"\nA frase - {frase} - é palíndromo\n")
+print("____ Verificar palíndromo ____")  # título do programa
+frase = input("\nEscreva a frase para a análise: ")  # entrada da frase
+frase = remover_acentos(frase)  # chama a função para remover acentos
+frase = frase.lower()  # transforma tudo em minúsculo
+frase = frase.replace(" ", "")  # remove espaços
+fraseContra = (frase[::-1])  # inverte a string (lê de trás para frente, passo -1)
+
+if frase in fraseContra:  # verifica se a frase normal é igual à invertida
+    print(f"\nA frase - {frase} - é palíndromo\n")  # imprime se for palíndromo
 else:
-    print(f"\nA frase - {frase} - não é palíndromo\n")
+    print(f"\nA frase - {frase} - não é palíndromo\n")  # imprime se não for palíndromo
