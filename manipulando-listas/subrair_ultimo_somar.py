@@ -1,3 +1,5 @@
+# Somar 10 números, retirar o último e calcular o total até acabar a lista 
+
 valores = []  # lista para armazenar os valores digitados
 
 for i in range(10):  # Loop para adicionar 10 valores

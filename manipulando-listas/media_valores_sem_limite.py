@@ -1,3 +1,5 @@
+# Calcular média de números (Sem limite de números)
+
 notas = []  # lista para armazenar as notas digitadas pelo usuário
 
 while True:  # loop infinito que só termina quando o usuário não digitar nada

@@ -1,3 +1,5 @@
+# Calcular média de 5 números
+
 notas = []  # lista para armazenar as notas digitadas pelo usuário
 
 for i in range(5):  # loop que vai repetir 5 vezes
