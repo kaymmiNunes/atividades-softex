@@ -21,5 +21,3 @@ print(f'O aluno {aluno["nome"]} de {aluno["idade"]} anos com a nota {aluno["nota
 
 
 
-
-
