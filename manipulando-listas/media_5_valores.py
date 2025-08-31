@@ -1,12 +1,10 @@
 # Calcular média de 5 números
 
-notas = []  # lista para armazenar as notas digitadas pelo usuário
+notas = []  # lista para armazenar as notas
 
-for i in range(5):  # loop que vai repetir 5 vezes
-    nota = float(input("Digite as 5 notas para saber a média: "))  # entrada da nota e conversão para float
-    i = i+1  # incrementa o contador (não necessário, mas presente)
-    notas.append(nota)  # adiciona a nota na lista
+for i in range(5):
+    nota = float(input("Digite uma nota: "))
+    notas.append(nota)
 
-resultado = (sum(notas) / len(notas))  # calcula a média somando as notas e dividindo pelo número de notas
-
-print("O resultado é: ", resultado)  # exibe o resultado da média
+resultado = sum(notas) / len(notas)  # calcula a média
+print("O resultado é:", resultado)

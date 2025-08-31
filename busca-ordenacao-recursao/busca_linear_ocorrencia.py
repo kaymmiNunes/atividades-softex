@@ -1,3 +1,4 @@
+# Busca linear para contar ocorrências de um valor em uma lista
 
 lista = [10, 23, 45, 10, 11, 15, 90, 10, 22]
 

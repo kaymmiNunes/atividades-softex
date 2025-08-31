@@ -1,3 +1,5 @@
+# Exibir o estado de um tabuleiro de jogo da velha
+
 tabuleiro = {
     (0,0): "x", (0,1): "-", (0,2): "-",
     (1,0): "-", (1,1): "x", (1,2): "-",

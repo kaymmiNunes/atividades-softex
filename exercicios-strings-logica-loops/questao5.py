@@ -1,20 +1,16 @@
-## Gerar acrônimo
+## Gerar acrônimo a partir de uma frase
 
-palavras = []  # lista para armazenar todas as palavras da frase
-ignorar = ["de", "da", "do", "das", "dos", "e"]  # lista de palavras que serão ignoradas
-palavras_sem_comuns = []  # lista para armazenar palavras importantes (sem as palavras ignoradas)
+ignorar = ["de", "da", "do", "das", "dos", "e"]  # palavras a ignorar
+palavras_sem_comuns = []  # palavras importantes
 
-frase = input("\nEscreva a frase para gerar acrônimo: ")  # entrada da frase
-palavras = frase.split()  # separa a frase em palavras e adiciona na lista
+frase = input("\nEscreva a frase para gerar acrônimo: ")
+palavras = frase.split()  # separa a frase em palavras
 
-for palavra in palavras:  # percorre cada palavra da lista
-    if palavra in ignorar:  # verifica se a palavra está na lista de ignoradas
-        continue  # pula essa palavra
-    else:
-        palavras_sem_comuns.append(palavra)  # adiciona a palavra na lista de palavras importantes
+# Filtra palavras importantes
+for palavra in palavras:
+    if palavra not in ignorar:
+        palavras_sem_comuns.append(palavra)
 
-# pega a primeira letra de cada palavra, transforma em maiúscula e junta com ponto
-sigla = ".".join(p[0].upper() for p in palavras_sem_comuns)  
-
+# Gera acrônimo com a primeira letra de cada palavra
+sigla = ".".join(p[0].upper() for p in palavras_sem_comuns)
 print(sigla)
-

@@ -1,3 +1,5 @@
+# Exibir cidades a partir de suas coordenadas
+
 cidades = {
     (-6.967426070047085, -35.796070947600555): "Remígio - PB",
     (-7.230653, -35.881057): "Campina Grande - PB",

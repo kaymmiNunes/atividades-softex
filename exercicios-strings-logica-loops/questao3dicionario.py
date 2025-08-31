@@ -1,23 +1,22 @@
-## Frequência de palavras
+## Frequência de palavras em uma frase
 
-import unicodedata  # biblioteca usada para manipular caracteres especiais
+import unicodedata  # para remover acentos
 
-def remover_acentos(frase):  
-    return unicodedata.normalize('NFD', frase).encode('ascii', 'ignore').decode('utf-8')  # normaliza e remove acentos
+def remover_acentos(frase):
+    return unicodedata.normalize('NFD', frase).encode('ascii', 'ignore').decode('utf-8')
 
-frase = input("Escreva a frase para a análise: ")  # entrada da frase
+frase = input("Escreva a frase para a análise: ")
+frase = remover_acentos(frase.lower())  # minúsculas e sem acentos
 
-frase = remover_acentos(frase.lower())  # deixa tudo em minúsculo e sem acento
+palavras = frase.split()  # cria lista de palavras
+frequencia = {}  # dicionário para contar palavras
 
-palavras = frase.split()  # separa a frase em palavras e cria uma lista
-
-frequencia = {}  # dicionário para armazenar a frequência de cada palavra
-
-for palavra in palavras:  # percorre cada palavra da lista
-    if palavra in frequencia:  # verifica se a palavra já existe no dicionário
-        frequencia[palavra] += 1  # se existir, soma +1
+for palavra in palavras:
+    if palavra in frequencia:
+        frequencia[palavra] += 1
     else:
-        frequencia[palavra] = 1  # se não existir, adiciona com valor 1
+        frequencia[palavra] = 1
 
-for palavra, contagem in frequencia.items():  # percorre as chaves e valores do dicionário
-    print(f"{palavra}: {contagem}")  # imprime a palavra e a quantidade que apareceu
+# Mostra a frequência de cada palavra
+for palavra, contagem in frequencia.items():
+    print(f"{palavra}: {contagem}")

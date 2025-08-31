@@ -1,3 +1,6 @@
+
+# Exibir notas de um aluno e calcular sua média
+
 aluno = {
     "Eduardo": (8.5, 7.0, 9.0)
 }

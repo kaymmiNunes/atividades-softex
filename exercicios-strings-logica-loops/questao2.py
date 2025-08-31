@@ -1,18 +1,18 @@
-## Verificar palíndromo (ignorando espaços e maiúsculas)
+## Verificar palíndromo (ignorando espaços, maiúsculas e acentos)
 
-import unicodedata  # importa a biblioteca usada para manipulação de caracteres especiais (acentos)
+import unicodedata  # para manipular caracteres especiais (remover acentos)
 
-def remover_acentos(frase):  
-    return unicodedata.normalize('NFD', frase).encode('ascii', 'ignore').decode('utf-8')  # normaliza e remove acentos
+def remover_acentos(frase):
+    return unicodedata.normalize('NFD', frase).encode('ascii', 'ignore').decode('utf-8')
 
-print("____ Verificar palíndromo ____")  # título do programa
-frase = input("\nEscreva a frase para a análise: ")  # entrada da frase
-frase = remover_acentos(frase)  # chama a função para remover acentos
-frase = frase.lower()  # transforma tudo em minúsculo
-frase = frase.replace(" ", "")  # remove espaços
-fraseContra = (frase[::-1])  # inverte a string (lê de trás para frente, passo -1)
+print("____ Verificar palíndromo ____")
+frase = input("\nEscreva a frase para a análise: ")
 
-if frase in fraseContra:  # verifica se a frase normal é igual à invertida
-    print(f"\nA frase - {frase} - é palíndromo\n")  # imprime se for palíndromo
+frase = remover_acentos(frase).lower().replace(" ", "")  # remove acentos, minúsculas e espaços
+frase_invertida = frase[::-1]  # inverte a string
+
+# Verifica se é palíndromo
+if frase == frase_invertida:
+    print(f"\nA frase - {frase} - é palíndromo\n")
 else:
-    print(f"\nA frase - {frase} - não é palíndromo\n")  # imprime se não for palíndromo
+    print(f"\nA frase - {frase} - não é palíndromo\n")

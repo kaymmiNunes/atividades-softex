@@ -1,3 +1,5 @@
+# Implementação de busca linear em lista
+
 def busca_linear(lista, valor):
     for i in range(len(lista)):
         if lista[i] == valor:

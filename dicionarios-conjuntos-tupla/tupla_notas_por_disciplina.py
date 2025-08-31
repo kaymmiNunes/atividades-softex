@@ -1,44 +1,45 @@
-alunos = {}
+# Sistema de cadastro e pesquisa de alunos
+
+alunos = {}  # chave: (nome, disciplina), valor: nota
 
 def menu():
     while True:
-            print("1 - Adicionar aluno")
-            print("2 - Pesquisar aluno")
-            print("3 - Sair")
+        print("1 - Adicionar aluno")
+        print("2 - Pesquisar aluno")
+        print("3 - Sair")
 
-            usuario = input("Opção: ")
+        usuario = input("Opção: ")
 
-            if usuario == "1":
-                adicionar()
-            elif usuario == "2":
-                pesquisar()
-            elif usuario == "3":
-                sair()
-            else:
-                print("Opção inválida, tente novamente.")
-                menu()
-        
+        if usuario == "1":
+            adicionar()
+        elif usuario == "2":
+            pesquisar()
+        elif usuario == "3":
+            sair()
+        else:
+            print("Opção inválida, tente novamente.")
+
 def adicionar():
     try:
         nome_aluno = input("Nome do aluno: ")
         disciplina = input("Disciplina: ")
         nota = float(input("Nota: "))
-
-        alunos[nome_aluno, disciplina] = nota
+        alunos[nome_aluno, disciplina] = nota  # armazena nota associada a aluno e disciplina
     except ValueError:
         print("Valor inválido, tente novamente.")
-        menu()
 
 def pesquisar():
     p_aluno = input("Nome do aluno: ")
-    alunos.get(p_aluno)
+    encontrado = False
     for (nome, disciplina), nota in alunos.items():
-        if nome == p_aluno:
+        if nome.lower() == p_aluno.lower():  # busca sem diferenciar maiúsculas/minúsculas
             print(f"Disciplina: {disciplina} - Nota: {nota}")
+            encontrado = True
+    if not encontrado:
+        print("Aluno não encontrado.")
 
-    
 def sair():
-        print("Saindo...")
-        exit()
+    print("Saindo...")
+    exit()
     
 menu()
