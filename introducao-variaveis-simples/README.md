@@ -32,7 +32,7 @@ O resultado da subtração é 5.0
 
 ---
 
-# 🧑‍🎓 Verificação de Maioridade em Python
+## 🧑‍🎓 Verificação de Maioridade em Python
 
 Este projeto é um **verificador de maioridade em Python**, criado para treinar entrada de dados, condicionais e formatação de saída. O programa solicita **nome, idade e altura** do usuário, exibindo os dados coletados e indicando se o usuário é **maior ou menor de idade**.
 
