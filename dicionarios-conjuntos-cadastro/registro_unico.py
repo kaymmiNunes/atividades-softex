@@ -18,6 +18,3 @@ else:
     aluno["aprovado"] = False
 
 print(f'O aluno {aluno["nome"]} de {aluno["idade"]} anos com a nota {aluno["nota"]} está {"aprovado" if  aluno["aprovado"] == True else "reprovado"}')
-
-
-
