@@ -1,18 +1,18 @@
 class Lampada:
 
-    def __init__(self, ligada):
-        self.ligada = ligada
-        self.ligada = False
+    def __init__(self, ligada): # Método construtor
+        self.ligada = ligada # Atributo de instância
+        self.ligada = False # Atributo de instância
 
-    def ligar(self):
+    def ligar(self): # Método de instância
         self.ligada = True
         return self.ligada
     
-    def desligar(self):
+    def desligar(self): # Método de instância
         self.ligada = False
         return self.ligada
     
-lampada = Lampada(True)
+lampada = Lampada(True) 
 
 print("Esse é o estado inicial da lâmpada:", lampada.ligada)
 print("Lâmpada ligada:", lampada.ligar())

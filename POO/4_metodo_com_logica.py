@@ -1,16 +1,16 @@
 class Aluno:
 
-    def __init__(self, nome, nota):
-        self.nome = nome
-        self.nota = nota
+    def __init__(self, nome, nota): # Método construtor
+        self.nome = nome # Atributo de instância
+        self.nota = nota # Atributo de instância
 
-    def ver_nome(self):
+    def ver_nome(self): # Método de instância
         return self.nome
 
-    def ver_nota(self):
+    def ver_nota(self): # Método de instância
         return self.nota
     
-    def verificar_aprovacao(self):
+    def verificar_aprovacao(self): # Método de instância
         if self.nota >= 6:
             return "Aprovado"
         else:

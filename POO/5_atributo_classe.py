@@ -1,12 +1,12 @@
 class ContaBancaria:
     
-    banco = "Banco Central"
+    banco = "Banco Central" # Atributo de classe
 
-    def __init__(self, titular, saldo):
-        self.titular = titular
-        self.saldo = saldo
+    def __init__(self, titular, saldo): # Método construtor
+        self.titular = titular # Atributo de instância
+        self.saldo = saldo # Atributo de instância
 
-    def mostrar_objetos(self):
+    def mostrar_objetos(self): # Método de instância
         return f"Banco: {self.banco}  Titular: {self.titular}  Saldo: {self.saldo}"
 
 pessoa1 = ContaBancaria("Antonio", 1000)
