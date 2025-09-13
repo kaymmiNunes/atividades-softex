@@ -1,6 +1,8 @@
-valores = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# Lista de nomes em ordem alfabética inversa
 
-def bubble_sort(lista):
+nomes = ["Ana", "Carlos", "Beatriz", "Daniel", "Eva"]
+
+def inverter_nomes(lista):
     n = len(lista)
     for i in range(n):
         for j in range(0, n-i-1):
@@ -8,4 +10,4 @@ def bubble_sort(lista):
                 lista[j], lista[j+1] = lista[j+1], lista[j]
     return lista[::-1]
 
-print(bubble_sort(valores))
+print(inverter_nomes(nomes)) 
