@@ -1,4 +1,5 @@
 class ContaBancaria:
+    
     banco = "Banco Central"
 
     def __init__(self, titular, saldo):
@@ -11,7 +12,7 @@ class ContaBancaria:
 pessoa1 = ContaBancaria("Antonio", 1000)
 pessoa2 = ContaBancaria("Carlos", 2000)
 
-
 print(pessoa1.mostrar_objetos())
 print(pessoa2.mostrar_objetos())
+
 
