@@ -38,7 +38,6 @@ try:
     with open('arquivo_inexistente.txt', 'r') as arquivo:
         conteudo = arquivo.read()
         print(conteudo) # o arquivo é fechado automaticamente ao sair do bloco with
-
 except FileNotFoundError:
     print("Erro: Arquivo não encontrado.")
 except Exception as erro:
