@@ -4,7 +4,7 @@ import random
 
 total_dividas = 0
 
-with open("clientes.txt", "w") as arquivo:
+with open("manipulando-arquivos/clientes.txt", "w") as arquivo:
     for i in range(1, 201):
         nome = f"Cliente{i}"
         saldo = random.randint(500, 5000)   # saldo entre 500 e 5000
@@ -20,7 +20,7 @@ clientes_atualizados = []
 sem_divida = 0
 com_divida = 0
 
-with open("clientes.txt", "r") as arquivo:
+with open("manipulando-arquivos/clientes.txt", "r") as arquivo:
     for linha in arquivo:
         nome, saldo, divida = linha.strip().split(",")
         saldo = int(saldo)
@@ -40,7 +40,7 @@ with open("clientes.txt", "r") as arquivo:
 
 
 # 3. Salvar resultados em outro arquivo
-with open("clientes_atualizados.txt", "w") as arquivo:
+with open("manipulando-arquivos/clientes_atualizados.txt", "w") as arquivo:
     divida_atual = 0
     arquivo.write("Nome,Saldo Atual,Divida Atual\n")
     for nome, saldo, divida in clientes_atualizados:
