@@ -1,0 +1,37 @@
+2️⃣ Aplicativo de Transporte
+Um app conecta passageiros e motoristas. Passageiros têm nome, telefone e histórico de corridas. 
+Motoristas possuem CNH, placa do veículo e avaliação média. 
+O aplicativo precisa calcular o valor da corrida e registrar o pagamento.
+
+Classe Passageiro:
+=> Atributo nome
+=> Atributo telefone
+=> Atributo historico
+=> Atributo localizacao
+=> Atributo avaliacao_media
+ ==> Método pedir_corrida
+
+Classe Motorista:
+=> Atributo nome
+=> Atributo telefone
+=> Atributo localizacao
+=> Atributo CNH
+=> Atributo veiculo
+=> Atributo avaliacao_media
+ ==> Método buscar_corrida
+
+Classe Corrida:
+=> Atributo motorista
+=> Atributo passageiro
+ ==> Método verificar_pedidos
+ ==> Método aceitar_corrida
+ ==> Método calcular_corrida
+ ==> Método cobrar_passageiro
+ ==> Método pagar_motorista 
+
+
+
+
+ 
+
+

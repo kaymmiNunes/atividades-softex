@@ -1,0 +1,19 @@
+5️⃣ Loja Online
+Uma loja virtual vende produtos de diferentes categorias. Cada produto possui nome, preço e estoque. 
+Clientes podem criar uma conta, adicionar produtos ao carrinho e finalizar a compra com diferentes formas de pagamento.
+
+Classe Produto:
+=> Atributo nome
+=> Atributo preco
+=> Atributo estoque
+
+Classe Cliente:
+=> Atributo nome
+=> Atributo conta
+=> Atributo formas_pagamento
+=> Atributo carrinho
+ ==> Método criar_conta
+ ==> Método adicionar_produto_carrinho 
+ ==> Método finalizar_compra
+
+

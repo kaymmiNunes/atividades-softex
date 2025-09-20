@@ -1,0 +1,19 @@
+6️⃣ Rede Social de Fotos
+Usuários podem criar perfil, publicar fotos e comentar nas fotos de outros usuários. Cada foto tem legenda, data de postagem e curtidas. 
+O sistema precisa permitir seguir outros usuários e enviar mensagens diretas.
+
+Classe Foto:
+=> Atributo legenda
+=> Atributo data_postagem
+=> Atributo curtidas
+
+Classe Usuario:
+=> Atributo nome
+ ==> Método criar_perfil
+ ==> Método publicar_fotos
+ ==> Método comentar_foto
+ ==> Método seguir_usuario
+ ==> Método eviar_mensagem 
+
+
+

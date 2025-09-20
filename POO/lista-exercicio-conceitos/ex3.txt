@@ -1,0 +1,31 @@
+3️⃣ Escola de Música
+A escola oferece aulas de violão, piano e canto. Cada curso tem carga horária e valor da mensalidade. 
+Alunos têm nome, idade e nível de conhecimento. Professores podem abrir novas turmas e registrar 
+a presença dos alunos.
+
+Classe CursoViolao:
+=> Atributo cargaHoraria
+=> Atributo valorMensalidade
+=> Atributo professor
+
+Classe CursoPiano:
+=> Atributo cargaHoraria
+=> Atributo valorMensalidade
+=> Atributo professor
+
+Classe CursoCanto:
+=> Atributo cargaHoraria
+=> Atributo valorMensalidade
+=> Atributo professor
+
+Classe Aluno:
+=> Atributo nome
+=> Atributo idade
+=> Atributo curso
+=> Atributo nivel_conhecimento
+
+Classe Professor:
+=> Atributo nome
+=> Atributo curso
+ ==> Método abrir_turma
+ ==> Método registrar_presenca

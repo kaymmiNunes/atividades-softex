@@ -1,0 +1,19 @@
+4️⃣ Sistema de Hotelaria
+O hotel possui vários quartos, cada um com número, tipo (simples, duplo) e status (ocupado/livre). 
+Hóspedes têm nome, documento e datas de entrada/saída. É possível reservar um quarto, fazer check-in e check-out.
+
+Classe Quarto:
+=> Atributo numero
+=> Atributo tipo 
+=> Atributo status
+
+Classe Hospede:
+=> Atributo nome
+=> Atributo documento
+=> Atributo datas
+
+Classe Hotel:
+=> Atributo quarto
+=> Atributo hospede 
+ ==> Método reservar_quarto
+ ==> Método atualizar_status
