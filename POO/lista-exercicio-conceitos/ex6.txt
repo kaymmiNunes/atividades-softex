@@ -13,7 +13,7 @@ Classe Usuario:
  ==> Método publicar_fotos
  ==> Método comentar_foto
  ==> Método seguir_usuario
- ==> Método eviar_mensagem 
+ ==> Método enviar_mensagem 
 
 
 

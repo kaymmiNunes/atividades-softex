@@ -1,6 +1,10 @@
 1️⃣ Biblioteca Digital
 Um sistema gerencia livros, autores e empréstimos. Cada livro tem título, ISBN e número de páginas. 
-Um autor possui nome e nacionalidade. O sistema permite registrar novos livros, buscar livros por autor e controlar empréstimos.
+Um autor possui nome e nacionalidade. O sistema permite registrar novos livros, buscar livros por autor e controlar empréstimos. 
+
+Classe Usuario:
+=> Atributo nome
+=> Atributo CPF
 
 Classe Autor:
 => Atributo nome
@@ -16,7 +20,7 @@ Classe Livro:
  ==> Método buscar_livro_autor
 
 Classe Emprestimo:
-=> Atributo nome_do_usuario 
+=> Atributo usuario 
 => Atributo livro
 => Atributo data_de_emprestimo 
 => Atributo tempo_do_emprestimo
