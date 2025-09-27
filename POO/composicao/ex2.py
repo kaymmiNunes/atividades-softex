@@ -2,8 +2,7 @@
 A empresa cria e gerencia seus funcionários.
 Cada funcionário tem nome e cargo.
 Crie uma empresa e adicione 3 funcionários.
-Mostre o nome de cada funcionário.
-'''
+Mostre o nome de cada funcionário.'''
 
 class Funcionario:
     
@@ -22,8 +21,6 @@ class Empresa:
     def mostrar_funcionarios(self):
         for funcionario in self.funcionarios:
             print(f'Nome: {funcionario.nome}, Cargo: {funcionario.cargo}')
-
-# Exemplo de uso
 
 empresa = Empresa()
 

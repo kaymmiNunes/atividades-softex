@@ -1,8 +1,7 @@
 '''Crie as classes Universidade e Departamento.
 A universidade é responsável por criar departamentos.
 Cada departamento tem nome e quantidade de professores.
-Crie uma universidade com 3 departamentos diferentes e liste-os.
-'''
+Crie uma universidade com 3 departamentos diferentes e liste-os.'''
 
 class Departamento:
 

@@ -1,8 +1,7 @@
 '''Crie as classes Playlist e Musica.
 A playlist cria músicas internamente.
 Cada música tem título e duração.
-Mostre todas as músicas de uma playlist.
-'''
+Mostre todas as músicas de uma playlist.'''
 
 class Musica:
 

@@ -1,8 +1,7 @@
 '''Crie as classes Livro e Pagina.
 Cada livro cria várias páginas internamente.
 Cada página tem um número e um pequeno texto.
-Mostre o conteúdo do livro listando todas as páginas.
-'''
+Mostre o conteúdo do livro listando todas as páginas.'''
 
 class Livro:
 
@@ -23,7 +22,6 @@ class Pagina:
         self.numero = numero
         self.texto = texto
 
-# Exemplo de uso
 livro = Livro()
 livro.adicionar_pagina(1, "Era uma vez...")
 livro.adicionar_pagina(2, "Em um reino distante...")
