@@ -1,35 +1,40 @@
-## Exercícios de Programação Orientada a Objetos (OOP)
+## Exercícios de Python - Classes, Herança e Abstração
 
-Este repositório contém exercícios práticos de **Programação Orientada a Objetos - Python (POO - P)**, desenvolvidos como parte do projeto Softex. O objetivo é consolidar conceitos de OOP como **classes, objetos, encapsulamento, herança, polimorfismo e abstração** por meio de implementações práticas.
+Este repositório contém **8 exercícios práticos** de Python, focados em **Programação Orientada a Objetos (POO)**, incluindo herança, polimorfismo, classes abstratas e propriedades.
 
----
+## Conteúdo
 
-## 📂 Estrutura do Repositório
+### Exercício 1: Herança Simples de Atributos e Métodos
+- Criação da classe base `Animal` com método `emitir_som()`.
+- Criação da classe `Cachorro` que herda de `Animal` e sobrescreve `emitir_som()`.
+- Demonstração de polimorfismo.
 
-O diretório `exercicios-oop` contém os seguintes exercícios:
+### Exercício 2: Classe Abstrata Básica
+- Criação de uma classe abstrata `FormaGeometrica` com método abstrato `calcular_area()`.
+- Criação da classe `Retangulo` que implementa `calcular_area()`.
 
-1. **Exercício 1: Classe Pessoa**
-   - Criação de uma classe `Pessoa` com atributos `nome` e `idade`.
-   - Método para exibir os dados da pessoa.
-   - **Conceitos abordados:** Classes, objetos, métodos.
+### Exercício 3: Herança com Construtores
+- Criação da classe base `Funcionario` com atributos `nome` e `salario`.
+- Criação da classe `Gerente` que herda de `Funcionario`, adiciona `departamento` e usa `super()` para inicialização.
 
-2. **Exercício 2: Herança**
-   - Criação de classes `Aluno` e `Professor` que herdam de `Pessoa`.
-   - Adição de atributos específicos (`matricula`, `disciplina`) e métodos adicionais.
-   - **Conceitos abordados:** Herança, encapsulamento, polimorfismo.
+### Exercício 4: Abstração com Propriedades
+- Criação da classe abstrata `Veiculo` com método abstrato `acelerar()` e propriedade abstrata `rodas`.
+- Criação das classes `Carro` e `Moto` que implementam os métodos e propriedades.
 
-3. **Exercício 3: Polimorfismo**
-   - Sobrescrita de métodos da classe base `Pessoa` nas classes filhas.
-   - Demonstração de polimorfismo em tempo de execução.
-   - **Conceitos abordados:** Polimorfismo, sobrescrita de métodos.
+### Exercício 5: Herança em Múltiplos Níveis (Hierarquia)
+- Criação de hierarquia `DispositivoEletronico → Computador → Notebook`.
+- Implementação de métodos específicos em cada nível e demonstração de chamada de métodos herdados.
 
-4. **Exercício 4: Abstração**
-   - Uso de classes abstratas e métodos abstratos.
-   - Criação de classes concretas que implementam os métodos abstratos.
-   - **Conceitos abordados:** Abstração, interfaces, implementação.
+### Exercício 6: Classe Abstrata com Método Concreto
+- Criação da classe abstrata `ContaBancaria` com método abstrato `sacar()` e método concreto `verificar_saldo()`.
+- Criação da classe `ContaCorrente` que implementa `sacar()` e manipula o saldo.
 
-5. **Exercício 5: Coleções**
-   - Manipulação de listas de objetos (`ArrayList`), inserção, remoção e iteração.
-   - **Conceitos abordados:** Coleções, laços de repetição, métodos de lista.
+### Exercício 7: Múltiplas Classes Abstratas (Mixins Conceituais)
+- Criação de classes abstratas `Percurso` e `Cobranca`.
+- Criação da classe `Taxi` que herda de ambas e implementa `tempo_estimado()` e `calcular_tarifa()`.
 
----
+### Exercício 8: Abstração e Herança para Sistema de Cadastro
+- Criação da classe abstrata `Pessoa`.
+- Criação das classes concretas `Cliente` e `Fornecedor`.
+- Implementação de método `detalhes_de_cadastro()` e demonstração de polimorfismo com uma lista de objetos.
+
