@@ -27,10 +27,10 @@ class Computador(DispositivoEletronico):
 class Notebook(Computador):
     
     def __init__(self):
-            super().__init__()
+        super().__init__()
 
     def verificar_bateria(self):
-            return print("Bateria em 100%.")
+        return print("Bateria em 100%.")
       
 notebook = Notebook()
 
