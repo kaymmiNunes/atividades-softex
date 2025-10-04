@@ -6,23 +6,21 @@ seguida, crie uma classe Cachorro que herda de Animal. No Cachorro, sobrescreva
 classes e chame o método.'''
 
 class Animal:
-
     def __init__(self, nome):
         self.nome = nome
 
     def emitir_som(self):
-        return print("Som genérico")
-    
-class Cachorro(Animal):
+        print("Som genérico")
 
+class Cachorro(Animal):
     def __init__(self, nome):
-       self.nome = nome
+        super().__init__(nome)  # chama o construtor de Animal
 
     def emitir_som(self):
-        return print("Latido!")
+        print("Latido!")
 
 dogTimido = Animal("Timido")
 dog = Cachorro("Fred")
 
 dogTimido.emitir_som()
-dog.emitir_som()
+dog.emitir_som() 

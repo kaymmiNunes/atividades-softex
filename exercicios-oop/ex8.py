@@ -42,7 +42,7 @@ class Fornecedor(Pessoa):
 
 def mostrar_cadastros(lista_pessoas):
     for pessoa in lista_pessoas:
-        pessoa.detalhes_de_cadastro()
+        pessoa.detalhes_de_cadastro() # Polimorfismo em ação
 
 pessoas = [
     Cliente("André", 1, "01/01/2020"),  

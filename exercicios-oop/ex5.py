@@ -37,8 +37,4 @@ notebook = Notebook()
 notebook.ligar()
 notebook.desligar()
 notebook.instalar_software()
-notebook.verificar_bateria()    
-
-
-
-        
+notebook.verificar_bateria()
