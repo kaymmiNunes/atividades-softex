@@ -33,15 +33,12 @@ class Conta:
         return self._historico
 
     def sacar(self, valor):
-        #IMPLEMENTAR
-        return False
+        self.saldo =- valor
+        return self.saldo
 
     def depositar(self, valor):
         if valor > 0:
             self._saldo += valor
-            print("\n=== Depósito realizado com sucesso! ===")
+            return print(f"\n=== Depósito de R${valor} realizado com sucesso! ===")
         else:
-            print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
-            return False
-
-        return True
+            return print("\n@@@ Operação falhou! O valor informado é inválido. @@@") 
