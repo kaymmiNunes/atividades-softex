@@ -17,5 +17,6 @@ def main():
     else:
         print("Cliente não encontrado.")
 
+
 if __name__ == "__main__":
     main()
